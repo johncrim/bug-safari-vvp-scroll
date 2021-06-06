@@ -2,6 +2,7 @@
 /dist
 tmp/
 /.cache
+*.mjs
 
 # dependencies
 /node_modules

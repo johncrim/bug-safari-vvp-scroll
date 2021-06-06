@@ -14,10 +14,11 @@
     "lib": [
       "dom",
       "es2020"
-    ]
-  }
-  // "exclude": [
-  //   "node_modules",
-  //   "tmp"
-  // ]
+    ],
+    "outDir": "dist"
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ],
 }
