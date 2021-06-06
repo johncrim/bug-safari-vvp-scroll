@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Demo Safari visualViewport + drag scroll up bug",
   "scripts": {
-    "build": "tsc && yarn bundle:esm",
-    "bundle:esm": "rollup -c"
+    "build": "tsc && rollup -c"
   },
   "repository": {
     "type": "git",

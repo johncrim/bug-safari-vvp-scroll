@@ -1,8 +1,9 @@
 # Build output
-/dist
 tmp/
 /.cache
-*.mjs
+/tsc-out
+
+# NOTE: We commit dist, b/c it's needed by github pages
 
 # dependencies
 /node_modules

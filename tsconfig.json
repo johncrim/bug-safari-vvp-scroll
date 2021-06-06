@@ -8,14 +8,10 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "moduleResolution": "node",
-    "types": [
-      "tslib"
-    ],
     "lib": [
-      "dom",
-      "es2020"
+      "dom"
     ],
-    "outDir": "dist"
+    "outDir": "tsc-out"
   },
   "exclude": [
     "node_modules",
