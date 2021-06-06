@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Safari visualViewport + drag scroll up bug</title>
+  </head>
+  <body>
+    <h1>visualViewport Safari bug demo</h1>
+
+    <p>
+      window.innerHeight: <code id="innerHeight"></code>
+    </p>
+
+    <p>
+      visualViewport (updated every 500ms):
+      <pre><code id="vpTimer">
+
+      </code></pre>
+    </p>
+
+    <div>
+    <b>Repro steps</b> (on iOS or iPadOS) :
+    </div>
+    <ol>
+      <li> Edit this field to make the on-screen keyboard appear:
+        <input placeholder="Click me">
+      </li>
+      <li> Scroll down to bottom of viewport </li>
+      <li> While scrolling up from bottom of viewport, leave finger on screen (while slowly dragging down to scroll). <b>The Bug</b> is that visualViewport resize events are occurring, and the <code>visualViewport.height</code> value is increasing while dragging, even though the height of the viewport is the same size. </li>
+      <li>After releasing finger from scrolling up, notice that <code>visualViewport.height</code> changes to the correct value (matching the actual height of the layout viewport).</li>
+    </ol>
+
+    <p><b>Expected behavior:</b> <code>visualViewport.height</code>
+      does not increase, and <code>visualViewport.resize</code> events are not raised, when the actual viewport is not changing size.
+    </p>
+
+    <div style="background-color: beige; padding: 1rem">
+      visualViewport last resize event:
+      <pre><code id="vpResize">
+        (none so far)
+      </code></pre>
+    </div>
+
+  <script type="module" src="bug-repro.ts"></script>
+  </body>
+</html>
