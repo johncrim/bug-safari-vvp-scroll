@@ -4,7 +4,7 @@
   "description": "Demo Safari visualViewport + drag scroll up bug",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build dist"
+    "build": "parcel build index.html"
   },
   "repository": {
     "type": "git",
